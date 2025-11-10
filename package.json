@@ -1,0 +1,50 @@
+{
+  "name": "news-explorer-backend",
+  "version": "1.0.0",
+  "description": "Backend for News Explorer application - User authentication and article saving",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "news",
+    "api",
+    "express",
+    "mongodb",
+    "jwt",
+    "authentication"
+  ],
+  "author": "Jose Fahrenheit",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseFahrenheit/news-explorer-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoseFahrenheit/news-explorer-backend/issues"
+  },
+  "homepage": "https://github.com/JoseFahrenheit/news-explorer-backend#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.0",
+    "nodemon": "^3.0.0"
+  },
+    "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "express-rate-limit": "^6.0.0",
+    "express-winston": "^4.2.0",
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "validator": "^13.0.0",
+    "winston": "^3.0.0"
+  }
+}
