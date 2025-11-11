@@ -1,19 +1,13 @@
-const express = require('express');
+const router = require('express').Router();
 const auth = require('../middleware/auth');
-const { validateArticle, validateArticleId } = require('../middleware/validation');
+const {
+  getArticles,
+  createArticle,
+  deleteArticle
+} = require('../controllers/articles');
 
-const router = express.Router();
-
-router.get('/', auth, (req, res) => {
-  res.status(200).json({ message: 'Artículos del usuario' });
-});
-
-router.post('/', auth, validateArticle, (req, res) => {
-  res.status(201).json({ message: 'Artículo creado' });
-});
-
-router.delete('/:articleId', auth, validateArticleId, (req, res) => {
-  res.status(200).json({ message: 'Artículo eliminado' });
-});
+router.get('/', auth, getArticles);
+router.post('/', auth, createArticle);
+router.delete('/:articleId', auth, deleteArticle);
 
 module.exports = router;

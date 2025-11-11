@@ -1,13 +1,7 @@
-const express = require('express');
+const router = require('express').Router();
 const auth = require('../middleware/auth');
+const { getCurrentUser } = require('../controllers/users');
 
-const router = express.Router();
-
-router.get('/me', auth, (req, res) => {
-  res.status(200).json({
-    email: req.user.email,
-    name: req.user.name
-  });
-});
+router.get('/me', auth, getCurrentUser);
 
 module.exports = router;

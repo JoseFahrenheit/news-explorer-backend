@@ -1,15 +1,11 @@
-require('dotenv').config();
-
-const {
-  NODE_ENV,
-  PORT = 3000,
-  JWT_SECRET = 'super-secret-key-dev',
-  DB_URL = 'mongodb://localhost:27017/news-explorer'
-} = process.env;
+const { JWT_SECRET = 'secret-key-development' } = process.env;
+const { NODE_ENV = 'development' } = process.env;
+const { PORT = 3000 } = process.env;
+const { DB_URL = 'mongodb://localhost:27017/news-explorer' } = process.env;
 
 module.exports = {
+  JWT_SECRET,
   NODE_ENV,
   PORT,
-  JWT_SECRET,
-  DB_URL,
+  DB_URL
 };
