@@ -37,3 +37,5 @@ Manejo centralizado de errores
 Variables de entorno para configuración
 
 API RESTful con códigos de estado HTTP apropiados
+## 🌐 Production Deployment
+API disponible en: http://34.44.116.108:3000/
